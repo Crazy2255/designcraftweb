@@ -1,0 +1,133 @@
+.enquiry-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.enquiry-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.enquiry-modal h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* .product-info {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+} */
+
+.product-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.product-info strong {
+  color: #333;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c00;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Phone Input Styles */
+.react-phone-input-2 {
+  width: 100% !important;
+}
+
+.react-phone-input-2 .form-control {
+  width: 100% !important;
+  height: 42px !important;
+  font-size: 16px !important;
+} 

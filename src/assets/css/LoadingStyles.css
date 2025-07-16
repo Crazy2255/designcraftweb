@@ -1,0 +1,171 @@
+/* Common Loading Styles */
+/* This file contains all loading-related styles to avoid duplication across components */
+
+/* Basic Loading Container */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 120px;
+}
+
+.loading-container p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin: 0;
+  font-weight: 500;
+}
+
+.loading-container::before {
+  content: 'Loading.....';
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Mobile Loading Container */
+.loading-container.mobile {
+  min-height: 80px;
+  padding: 20px;
+}
+
+/* Simple Loader Container */
+.simple-loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 60px;
+}
+
+.simple-loader-container p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Simple Loader */
+.simple-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 60px;
+}
+
+.simple-loader::before {
+  content: 'Loading.....';
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 120px;
+}
+
+.loading-spinner::before {
+  content: 'Loading.....';
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Image Loading States */
+.image-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-loading .simple-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 60px;
+}
+
+.image-loading .simple-loader::before {
+  content: 'Loading.....';
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Loading for specific components */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.loading::before {
+  content: 'Loading.....';
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Responsive Loading Styles */
+@media (max-width: 768px) {
+  .loading-container {
+    padding: 20px;
+    min-height: 80px;
+  }
+  
+  .loading-container::before {
+    font-size: 0.9rem;
+  }
+  
+  .simple-loader-container {
+    padding: 15px;
+    min-height: 50px;
+  }
+  
+  .loading-spinner {
+    padding: 20px;
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-container {
+    padding: 15px;
+    min-height: 60px;
+  }
+  
+  .loading-container::before {
+    font-size: 0.8rem;
+  }
+  
+  .simple-loader::before {
+    font-size: 0.8rem;
+  }
+  
+  .loading-spinner::before {
+    font-size: 0.9rem;
+  }
+} 

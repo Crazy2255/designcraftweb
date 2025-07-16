@@ -1,0 +1,148 @@
+/* Product Finishes Section Styles */
+.product-finishes-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.finishes-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-family: var(--font-primary);
+}
+
+/* Tabs Navigation */
+.finishes-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  padding: 0;
+}
+
+.finishes-tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.tab-button {
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.tab-button:hover {
+  color: var(--primary-color);
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.tab-button.active::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Finishes Grid */
+.finishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.finish-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.finish-image-container {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.finish-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.finish-name {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .finishes-title {
+    font-size: 20px;
+  }
+  
+  .tab-button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .finishes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+  
+  .finish-image-container {
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .finishes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .finish-image-container {
+    height: 90px;
+  }
+  
+  .finish-name {
+    font-size: 12px;
+  }
+} 

@@ -1,0 +1,143 @@
+/* CaseStudy.css */
+
+.case-study-section {
+  padding: 40px 0 60px 0;
+  background: #f8f8f8;
+  /* min-height: 100vh; */
+}
+
+.case-study-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.case-study-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.case-study-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+
+.case-study-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+
+.case-study-img {
+  width: 100%;
+  /* height: ; */
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.case-study-info {
+  padding: 24px 20px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.case-study-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #222;
+  min-height: 48px;
+}
+
+.case-study-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+}
+
+.case-study-detail {
+  display: flex;
+  align-items: center;
+  font-size: 0.98rem;
+  color: #444;
+  margin-bottom: 7px;
+  gap: 10px;
+}
+
+.case-study-icon {
+  color: #ff7f3f;
+  font-size: 1.1em;
+  min-width: 18px;
+}
+
+.case-study-btn {
+  background: #ff7f3f;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.case-study-btn:hover {
+  background: #e86c1a;
+}
+
+@media (max-width: 1200px) {
+  .case-study-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .case-study-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-study-section {
+    padding: 24px 0 40px 0;
+  }
+  .case-study-heading {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+  .case-study-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .case-study-card {
+    width: 98vw;
+    max-width: 94vw;
+  }
+  .case-study-info {
+    padding: 16px 10px 14px 10px;
+  }
+}
+
+/* FontAwesome fallback for icons if needed */
+.fa-calendar:before { content: '\f073'; font-family: 'FontAwesome'; }
+.fa-building:before { content: '\f1ad'; font-family: 'FontAwesome'; }
+.fa-map-marker:before { content: '\f041'; font-family: 'FontAwesome'; }
+.fa-tasks:before { content: '\f0ae'; font-family: 'FontAwesome'; } 

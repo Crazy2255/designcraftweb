@@ -1,0 +1,237 @@
+/* Why Choose Us Section Styles */
+.why-choose-us-section {
+  padding: 80px 20px;
+  background-color: #faf9f8;
+}
+
+/* Background image */
+/* .why-choose-us-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/icons/union.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  z-index: 0;
+} */
+
+/* Header styles */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h2.why-choose-us-title {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  line-height: 1;
+  margin: 0;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Left side features */
+.left-features {
+  flex: 1;
+  max-width: 45%;
+}
+
+/* Right side features */
+.right-features {
+  flex: 1;
+  max-width: 45%;
+}
+
+/* Vertical divider */
+.features-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #e0e0e0;
+  transform: translateX(-50%);
+}
+
+.feature-item {
+  padding: 30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.feature-item::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.feature-item:last-child::after {
+  display: none;
+}
+
+.feature-icon {
+  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.feature-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feature-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 48px;
+  }
+  .h2.why-choose-us-title{
+    font-size: 2rem;
+  }
+
+  .features-container {
+    flex-direction: column;
+  }
+
+  .features-container::before {
+    display: none;
+  }
+
+  .left-features,
+  .right-features {
+    max-width: 100%;
+  }
+
+  .feature-item {
+    padding: 20px 0;
+  }
+}
+
+/* Large Desktop (1440px and above) */
+@media (min-width: 1441px) {
+  .section-header {
+    max-width: 800px;
+  }
+  
+  .section-title {
+    font-size: 5rem;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+  
+  .feature-title {
+    font-size: 1.6rem;
+  }
+  
+  .feature-description {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop (1200px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1201px) {
+  .section-title {
+    font-size: 5rem;
+  }
+}
+
+/* Small Desktop/Laptop (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 993px) {
+  .section-header {
+    max-width: 650px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablets (768px - 992px) */
+@media (max-width: 992px) {
+  .section-header {
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 2.3rem;
+  }
+  
+  .section-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Large Mobile (576px - 768px) */
+@media (max-width: 768px) {
+  .section-header {
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Small Mobile (Up to 576px) */
+@media (max-width: 576px) {
+  .section-header {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-description {
+    font-size: 0.9rem;
+  }
+} 
