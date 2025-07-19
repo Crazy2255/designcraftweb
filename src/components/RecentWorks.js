@@ -76,7 +76,7 @@ const RecentWorks = () => {
       setIsLoading(true);
       setError(null);
       
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/gallery.php');
+      const response = await fetch('http://157.175.147.228/admin/api/gallery.php');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -132,7 +132,7 @@ const RecentWorks = () => {
       >
         {!hasError ? (
           <img 
-            src={`https://design.elitedigitals.ae/admin/uploads/gallery/${item.image}`} 
+            src={`http://157.175.147.228/admin/uploads/gallery/${item.image}`} 
             alt={item.name}
             style={{
               width: '100%',

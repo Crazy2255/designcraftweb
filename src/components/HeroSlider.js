@@ -49,7 +49,7 @@ const HeroSlider = () => {
       setError(null);
       console.log('Fetching hero data...');
       
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/hero-sections.php');
+      const response = await fetch('http://157.175.147.228/admin/api/hero-sections.php');
       console.log('Response status:', response.status);
       
       if (!response.ok) {
@@ -247,7 +247,7 @@ const HeroSlider = () => {
             <div className="slide" key={slide.id}>
               <div className="slide-background">
                 <img 
-                  src={`https://design.elitedigitals.ae/admin/uploads/hero/${slide.banner_image}`} 
+                  src={`http://157.175.147.228/admin/uploads/hero/${slide.banner_image}`} 
                   alt={slide.name} 
                   className="slide-image"
                   onLoad={handleImageLoad}

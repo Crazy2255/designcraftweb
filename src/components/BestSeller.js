@@ -85,7 +85,7 @@ const BestSeller = () => {
         return;
       }
 
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/products.php');
+      const response = await fetch('http://157.175.147.228/admin/api/products.php');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -134,7 +134,7 @@ const BestSeller = () => {
       await Promise.all(
         products.map(async (product) => {
           if (product.images && product.images.length > 0) {
-            const imageUrl = `https://design.elitedigitals.ae/admin/uploads/products/${product.images[0]}`;
+            const imageUrl = `http://157.175.147.228/admin/uploads/products/${product.images[0]}`;
             const isLandscape = await checkImageOrientation(imageUrl);
             orientations[product.id] = isLandscape;
           }
@@ -150,7 +150,7 @@ const BestSeller = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/categories.php');
+      const response = await fetch('http://157.175.147.228/admin/api/categories.php');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -324,7 +324,7 @@ const BestSeller = () => {
                     <div className={`product-image-container ${imageOrientations[product.id] ? 'landscape' : 'portrait'}`}>
                       <img 
                         src={product.images && product.images.length > 0 
-                          ? `https://design.elitedigitals.ae/admin/uploads/products/${product.images[0]}`
+                          ? `http://157.175.147.228/admin/uploads/products/${product.images[0]}`
                           : defaultProductImage} 
                         alt={product.name} 
                         className={`product-image ${imageOrientations[product.id] ? 'landscape' : 'portrait'}`}

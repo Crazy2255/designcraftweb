@@ -97,7 +97,7 @@ const ProductDetailPage = () => {
     const fetchProductDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`https://design.elitedigitals.ae/admin/api/products.php?id=${id}`);
+        const response = await fetch(`http://157.175.147.228/admin/api/products.php?id=${id}`);
         if (!response.ok) {
           throw new Error('Product not found');
         }
@@ -107,11 +107,11 @@ const ProductDetailPage = () => {
         setProduct(data);
         
         if (data.images && data.images.length > 0) {
-          setMainImage(`https://design.elitedigitals.ae/admin/uploads/products/${data.images[0]}`);
+          setMainImage(`http://157.175.147.228/admin/uploads/products/${data.images[0]}`);
         }
 
         // Fetch related products
-        const relatedResponse = await fetch(`https://design.elitedigitals.ae/admin/api/products.php?subcategory=${data.subcategory_name}`);
+        const relatedResponse = await fetch(`http://157.175.147.228/admin/api/products.php?subcategory=${data.subcategory_name}`);
         const relatedData = await relatedResponse.json();
         // Filter out current product and limit to 5 items
         const filteredRelated = relatedData
@@ -133,7 +133,7 @@ const ProductDetailPage = () => {
 
   // Handle thumbnail click
   const handleThumbnailClick = (img, index) => {
-    setMainImage(`https://design.elitedigitals.ae/admin/uploads/products/${img}`);
+    setMainImage(`http://157.175.147.228/admin/uploads/products/${img}`);
     setActiveIndex(index);
   };
 
@@ -238,7 +238,7 @@ const ProductDetailPage = () => {
                   onClick={() => handleThumbnailClick(img, index)}
                 >
                   <img 
-                    src={`https://design.elitedigitals.ae/admin/uploads/products/${img}`} 
+                    src={`http://157.175.147.228/admin/uploads/products/${img}`} 
                     alt={`${product.name} - View ${index + 1}`} 
                   />
                 </div>
@@ -329,7 +329,7 @@ const ProductDetailPage = () => {
                 <div className="finish-item" key={index}>
                   <div className="finish-image">
                     <img 
-                      src={`https://design.elitedigitals.ae/admin/uploads/materials/${material.image}`}
+                      src={`http://157.175.147.228/admin/uploads/materials/${material.image}`}
                       alt={material.name}
                       onError={(e) => {
                         e.target.src = 'https://via.placeholder.com/150x150?text=No+Image';
@@ -348,7 +348,7 @@ const ProductDetailPage = () => {
                 <div className="finish-item" key={index}>
                   <div className="finish-image">
                     <img 
-                      src={`https://design.elitedigitals.ae/admin/uploads/wooden/${wood.image}`}
+                      src={`http://157.175.147.228/admin/uploads/wooden/${wood.image}`}
                       alt={wood.name}
                       onError={(e) => {
                         e.target.src = 'https://via.placeholder.com/150x150?text=No+Image';
@@ -367,7 +367,7 @@ const ProductDetailPage = () => {
                 <div className="finish-item" key={index}>
                   <div className="finish-image">
                     <img 
-                      src={`https://design.elitedigitals.ae/admin/uploads/colors/${color.image}`}
+                      src={`http://157.175.147.228/admin/uploads/colors/${color.image}`}
                       alt={color.name}
                       onError={(e) => {
                         e.target.src = 'https://via.placeholder.com/150x150?text=No+Image';
@@ -386,7 +386,7 @@ const ProductDetailPage = () => {
                 <div className="finish-item" key={index}>
                   <div className="finish-image">
                     <img 
-                      src={`https://design.elitedigitals.ae/admin/uploads/marbles/${marble.image}`}
+                      src={`http://157.175.147.228/admin/uploads/marbles/${marble.image}`}
                       alt={marble.name}
                       onError={(e) => {
                         e.target.src = 'https://via.placeholder.com/150x150?text=No+Image';
@@ -527,7 +527,7 @@ const ProductDetailPage = () => {
                     <Link to={`/product/${relatedProduct.id}`}>
                       <div className="related-product-image">
                         <img 
-                          src={`https://design.elitedigitals.ae/admin/uploads/products/${relatedProduct.images[0]}`}
+                          src={`http://157.175.147.228/admin/uploads/products/${relatedProduct.images[0]}`}
                           alt={relatedProduct.name}
                           onError={(e) => {
                             e.target.src = 'https://via.placeholder.com/300x300?text=Image+Not+Found';

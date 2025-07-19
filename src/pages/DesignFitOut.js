@@ -55,7 +55,7 @@ const DesignFitOut = () => {
     try {
       const response = await axios({
         method: 'post',
-        url: 'https://design.elitedigitals.ae/admin/api/submit-contact.php',
+        url: 'http://157.175.147.228/admin/api/submit-contact.php',
         data: formDataToSend,
         headers: {
           'Content-Type': 'multipart/form-data'

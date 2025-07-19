@@ -18,7 +18,7 @@ const HomeCaseStudy = () => {
   useEffect(() => {
     const fetchCaseStudies = async () => {
       try {
-        const res = await fetch('https://design.elitedigitals.ae/admin/api/case_studies.php');
+        const res = await fetch('http://157.175.147.228/admin/api/case_studies.php');
         
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -89,7 +89,7 @@ const HomeCaseStudy = () => {
             <div className="card-image-container">
               <img
                 src={item.images && item.images.length > 0 
-                  ? `https://design.elitedigitals.ae/admin/uploads/case-studies/${item.images[0]}`
+                  ? `http://157.175.147.228/admin/uploads/case-studies/${item.images[0]}`
                   : require('../assets/images/products/desks/1.png')}
                 alt={item.name}
                 className="case-study-img"

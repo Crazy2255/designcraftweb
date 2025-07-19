@@ -12,7 +12,7 @@ const Testimonials = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/testimonials.php');
+      const response = await fetch('http://157.175.147.228/admin/api/testimonials.php');
       const data = await response.json();
       if (data && Array.isArray(data)) {
         const formattedTestimonials = data.map(item => ({

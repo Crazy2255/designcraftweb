@@ -144,7 +144,7 @@ const ExecutiveDeskPage = ({ category }) => {
     const fetchSubcategories = async () => {
       try {
         const categoryId = getCategoryId(category);
-        const response = await fetch(`https://design.elitedigitals.ae/admin/api/subcategories.php?category_id=${categoryId}`);
+        const response = await fetch(`http://157.175.147.228/admin/api/subcategories.php?category_id=${categoryId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch subcategories');
         }
@@ -186,7 +186,7 @@ const ExecutiveDeskPage = ({ category }) => {
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
           .join(' ');
 
-        const response = await fetch(`https://design.elitedigitals.ae/admin/api/products.php?subcategory=${formattedSubcategory}`);
+        const response = await fetch(`http://157.175.147.228/admin/api/products.php?subcategory=${formattedSubcategory}`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch products');
@@ -201,7 +201,7 @@ const ExecutiveDeskPage = ({ category }) => {
           await Promise.all(
             data.map(async (product) => {
               if (product.images?.[0]) {
-                const imageUrl = `https://design.elitedigitals.ae/admin/uploads/products/${product.images[0]}`;
+                const imageUrl = `http://157.175.147.228/admin/uploads/products/${product.images[0]}`;
                 const isLandscape = await checkImageOrientation(imageUrl);
                 orientations[product.id] = isLandscape;
               }
@@ -428,7 +428,7 @@ const ExecutiveDeskPage = ({ category }) => {
               >
                 <div className={`product-card-image ${imageOrientations[product.id] ? 'landscape' : 'portrait'}`}>
                   <img 
-                    src={`https://design.elitedigitals.ae/admin/uploads/products/${product.images?.[0] || ''}`}
+                    src={`http://157.175.147.228/admin/uploads/products/${product.images?.[0] || ''}`}
                     alt={product.name}
                     onError={handleImageError}
                     loading="lazy"

@@ -21,7 +21,7 @@ const BlogPage = () => {
       setRetrying(false);
       setError(null);
 
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/blogs.php');
+      const response = await fetch('http://157.175.147.228/admin/api/blogs.php');
       
       if (!response.ok) {
         throw new Error(`Server returned ${response.status}: ${response.statusText}`);
@@ -118,7 +118,7 @@ const BlogPage = () => {
               <div className="blog-image-overlay">
                 <img 
                   src={blog.image 
-                    ? `https://design.elitedigitals.ae/admin/uploads/blogs/${blog.image}`
+                    ? `http://157.175.147.228/admin/uploads/blogs/${blog.image}`
                     : require('../assets/images/no-image.png')
                   }
                   alt={blog.heading}

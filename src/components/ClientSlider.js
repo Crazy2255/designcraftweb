@@ -106,7 +106,7 @@ const ClientSlider = () => {
       setIsLoading(true);
       setError(null);
       
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/clients.php');
+      const response = await fetch('http://157.175.147.228/admin/api/clients.php');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -116,7 +116,7 @@ const ClientSlider = () => {
       
       if (data && data.length > 0) {
         const formattedClients = data.map(client => ({
-          img: `https://design.elitedigitals.ae/admin/uploads/clients/${client.image}`,
+          img: `http://157.175.147.228/admin/uploads/clients/${client.image}`,
           name: client.name
         }));
         setClients(formattedClients);

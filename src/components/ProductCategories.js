@@ -44,7 +44,7 @@ const ProductCategories = () => {
       setError(null);
       console.log('Fetching categories...');
       
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/categories.php');
+      const response = await fetch('http://157.175.147.228/admin/api/categories.php');
       console.log('Response status:', response.status);
       
       if (!response.ok) {
@@ -156,7 +156,7 @@ const ProductCategories = () => {
             >
               <div className="category-image-wrapper">
                 <img 
-                  src={category.image ? `https://design.elitedigitals.ae/admin/uploads/categories/${category.image}` : defaultImage} 
+                  src={category.image ? `http://157.175.147.228/admin/uploads/categories/${category.image}` : defaultImage} 
                   alt={category.name}
                   className="category-image"
                   onLoad={handleImageLoad}

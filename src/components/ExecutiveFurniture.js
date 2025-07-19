@@ -19,7 +19,7 @@ const ExecutiveFurniture = () => {
   const fetchExecutiveProducts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/products.php?subcategory=Executive Desk');
+      const response = await fetch('http://157.175.147.228/admin/api/products.php?subcategory=Executive Desk');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -89,7 +89,7 @@ const ExecutiveFurniture = () => {
               <Link to={`/product/${product.id}`}>
                 <div className="product-image-container">
                   <img 
-                    src={`https://design.elitedigitals.ae/admin/uploads/products/${product.images[0]}`}
+                    src={`http://157.175.147.228/admin/uploads/products/${product.images[0]}`}
                     alt={product.name} 
                     className="product-image"
                     onError={(e) => {

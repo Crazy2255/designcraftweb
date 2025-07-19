@@ -19,7 +19,7 @@ const DesignIdeas = () => {
 
   const getImageUrl = (filename) => {
     if (!filename) return null;
-    return `https://design.elitedigitals.ae/admin/uploads/design-ideas/${filename}`;
+    return `http://157.175.147.228/admin/uploads/design-ideas/${filename}`;
   };
 
   const processWorkImages = (workImages) => {
@@ -50,7 +50,7 @@ const DesignIdeas = () => {
     const fetchDesignIdeas = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://design.elitedigitals.ae/admin/api/design_ideas.php');
+        const response = await fetch('http://157.175.147.228/admin/api/design_ideas.php');
         
         if (!response.ok) {
           throw new Error('Failed to fetch design ideas');

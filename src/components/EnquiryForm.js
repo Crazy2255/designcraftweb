@@ -37,7 +37,7 @@ const EnquiryForm = ({ isOpen, onClose, productName, productSku }) => {
     setSuccess('');
 
     try {
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/enquiries.php', {
+      const response = await fetch('http://157.175.147.228/admin/api/enquiries.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

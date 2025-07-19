@@ -16,7 +16,7 @@ const CaseStudiesDetails = () => {
   useEffect(() => {
     const fetchCaseStudyDetails = async () => {
       try {
-        const res = await fetch(`https://design.elitedigitals.ae/admin/api/case_studies.php?id=${id}`);
+        const res = await fetch(`http://157.175.147.228/admin/api/case_studies.php?id=${id}`);
         
         // First check if the response is ok
         if (!res.ok) {
@@ -85,7 +85,7 @@ const CaseStudiesDetails = () => {
   }
 
   const slides = caseStudy.images.map(image => ({
-    src: `https://design.elitedigitals.ae/admin/uploads/case-studies/${image}`,
+    src: `http://157.175.147.228/admin/uploads/case-studies/${image}`,
     alt: `${caseStudy.name} Project Image`
   }));
 
@@ -111,7 +111,7 @@ const CaseStudiesDetails = () => {
           {heroImage && (
             <div className="hero-image">
               <img
-                src={`https://design.elitedigitals.ae/admin/uploads/case-studies/${heroImage}`}
+                src={`http://157.175.147.228/admin/uploads/case-studies/${heroImage}`}
                 alt={`${caseStudy.name} Hero`}
                 onError={(e) => {
                   console.error('Hero image failed to load:', e.target.src);
@@ -187,7 +187,7 @@ const CaseStudiesDetails = () => {
                     onClick={() => openLightbox(index + 1)}
                   >
                     <img
-                      src={`https://design.elitedigitals.ae/admin/uploads/case-studies/${image}`}
+                      src={`http://157.175.147.228/admin/uploads/case-studies/${image}`}
                       alt={`${caseStudy.name} Project Image ${index + 1}`}
                       onError={(e) => {
                         console.error('Gallery image failed to load:', e.target.src);

@@ -17,7 +17,7 @@ const Gallery = () => {
   const fetchGalleryItems = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/gallery.php');
+      const response = await fetch('http://157.175.147.228/admin/api/gallery.php');
       const data = await response.json();
       if (data && Array.isArray(data)) {
         setGalleryItems(data);
@@ -98,7 +98,7 @@ const Gallery = () => {
               >
                 <div className="gallery-item-inner">
                   <img 
-                    src={`https://design.elitedigitals.ae/admin/uploads/gallery/${item.image}`} 
+                    src={`http://157.175.147.228/admin/uploads/gallery/${item.image}`} 
                     alt={item.name}
                     loading="lazy"
                   />
@@ -122,7 +122,7 @@ const Gallery = () => {
           <button className="lightbox-close" onClick={closeLightbox}>&times;</button>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <img 
-              src={`https://design.elitedigitals.ae/admin/uploads/gallery/${selectedImage.image}`} 
+              src={`http://157.175.147.228/admin/uploads/gallery/${selectedImage.image}`} 
               alt={selectedImage.name} 
             />
             <div className="lightbox-details">

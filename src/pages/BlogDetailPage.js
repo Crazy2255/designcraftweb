@@ -30,7 +30,7 @@ const BlogDetailPage = () => {
       }
 
       console.log('Fetching blog with ID:', id);
-      const response = await fetch(`https://design.elitedigitals.ae/admin/api/blogs.php?id=${id}`);
+      const response = await fetch(`http://157.175.147.228/admin/api/blogs.php?id=${id}`);
       
       console.log('Response status:', response.status);
       
@@ -100,7 +100,7 @@ const BlogDetailPage = () => {
   const fetchRecentPosts = async () => {
     try {
       console.log('Fetching recent posts...');
-      const response = await fetch('https://design.elitedigitals.ae/admin/api/blogs.php');
+      const response = await fetch('http://157.175.147.228/admin/api/blogs.php');
       
       console.log('Recent posts response status:', response.status);
       
@@ -210,7 +210,7 @@ const BlogDetailPage = () => {
     const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
     
     // Construct full URL
-    return `https://design.elitedigitals.ae/admin/uploads/blogs/${cleanPath}`;
+    return `http://157.175.147.228/admin/uploads/blogs/${cleanPath}`;
   };
 
   if (loading) {

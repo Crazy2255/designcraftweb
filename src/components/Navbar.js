@@ -39,28 +39,28 @@ const Navbar = () => {
     const fetchSubcategories = async () => {
       try {
         // Fetch office furniture subcategories (category ID 1)
-        const officeResponse = await fetch('https://design.elitedigitals.ae/admin/api/subcategories.php?category_id=1');
+        const officeResponse = await fetch('http://157.175.147.228/admin/api/subcategories.php?category_id=1');
         const officeData = await officeResponse.json();
         if (officeData.success) {
           setOfficeSubcategories(officeData.subcategories);
         }
 
         // Fetch office chairs subcategories (category ID 2)
-        const chairsResponse = await fetch('https://design.elitedigitals.ae/admin/api/subcategories.php?category_id=2');
+        const chairsResponse = await fetch('http://157.175.147.228/admin/api/subcategories.php?category_id=2');
         const chairsData = await chairsResponse.json();
         if (chairsData.success) {
           setChairSubcategories(chairsData.subcategories);
         }
 
         // Fetch storage solutions subcategories (category ID 3)
-        const storageResponse = await fetch('https://design.elitedigitals.ae/admin/api/subcategories.php?category_id=3');
+        const storageResponse = await fetch('http://157.175.147.228/admin/api/subcategories.php?category_id=3');
         const storageData = await storageResponse.json();
         if (storageData.success) {
           setStorageSubcategories(storageData.subcategories);
         }
 
         // Fetch sofa in lounge subcategories (category ID 4)
-        const sofaResponse = await fetch('https://design.elitedigitals.ae/admin/api/subcategories.php?category_id=4');
+        const sofaResponse = await fetch('http://157.175.147.228/admin/api/subcategories.php?category_id=4');
         const sofaData = await sofaResponse.json();
         if (sofaData.success) {
           setSofaSubcategories(sofaData.subcategories);
